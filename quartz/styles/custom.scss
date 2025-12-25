@@ -1,0 +1,43 @@
+@use "./base.scss";
+
+
+/* 1. Ensure the list items have space for a custom bullet */
+.explorer li:not(:has(button.folder-button)) {
+  position: relative;
+  padding-left: 1.2rem !important;
+  list-style-type: none !important; /* Hide standard bullets to prevent layout breaks */
+}
+
+/* 2. Add a custom bullet using a pseudo-element for file items only */
+.explorer li:not(:has(button.folder-button)) > a::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--secondary); /* Uses your theme's secondary color */
+  font-weight: bold;
+}
+
+/* 3. Keep folders as flex containers to ensure chevron and title stay aligned */
+.explorer .folder-container {
+  display: flex !important;
+  align-items: center !important;
+  list-style-type: none !important;
+}
+
+.explorer .folder-title {
+  font-size: 1rem; /* Adjust to match your theme's default if necessary */
+}
+
+.explorer .folder-outer ul li a {
+  font-size: 0.90rem !important;
+}
+
+/* Highlight the background of the currently selected file */
+.explorer li > a.active {
+  background-color: var(--highlight) !important; /* Uses your theme's highlight color */
+  border-radius: 4px;
+  padding: 2px 8px; /* Adds space around the text to create the 'cell' look */
+  display: inline-block; /* Ensures padding and background cover the text area */
+  width: calc(100% - 1.2rem); /* Fits the highlight to the width of the sidebar */
+  color: var(--secondary) !important; /* Optional: change text color when active */
+}
