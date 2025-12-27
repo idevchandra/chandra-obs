@@ -79,13 +79,13 @@ Here, you see sections - **Data** and **Parameters** with multiple parameters. T
 
 ## Data Sets
 
-**Training Data**  
+### Training Data
 Training data is the dataset used to _teach_ a machine learning model how to make _predictions_ or _classify_ information. It contains input examples along with their correct outputs. The model learns patterns and relationships from this data. Typically, this is the largest portion of your dataset, often around 70-80%.
 
-**Validation Data**  
+### Validation Data
 Validation data is a separate subset used during the training process to fine-tune the model. The validation set acts as a checkpoint to ensure the model is generalizing well.
 
-**Testing Data**  
+### Testing Data
 Testing data is for evaluating the final model after training and validation are complete. It provides an unbiased measure of how the model will perform. 
 
 > Importantly, this Testing Data is never used during training or tuning, ensuring an accurate assessment of the model’s true predictive capabilities.

@@ -7,6 +7,11 @@
 
 ## How to customize this website?
 
+### Disable Tags Cloud
+
+- `quartz.layout.ts` 
+- Comment `Component.Graph()`
+
 ### The Explorer visual changes..
 
 ... such as
