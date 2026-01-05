@@ -5,6 +5,35 @@
 1. `npx quartz build --serve`
 2. Open `http://localhost:8080/` in browser
 
+## Push (when multiple gits)
+
+Refer the config below and make sure the `Host` is right. Then use these commands.
+
+```
+git remote set-url origin git@github.com-idevchandra:idevchandra/chandra-obs.git
+git config user.name "Chandra"
+git config user.email "cpolepeddi@outlook.com"
+```
+
+```
+[~/.ssh]
+~ cat config
+# github-idevchandra
+Host github.com-idevchandra
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/GitHub-idevChandra
+    IdentitiesOnly yes
+
+# github-anotheraccount
+Host github.com-anotheraccount
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/GitHub-anotheraccount
+    IdentitiesOnly yes
+```
+
+
 ## How to customize this website?
 
 ### Disable Tags Cloud
@@ -26,11 +55,11 @@
 - Open `Breadcrumbs.tsx`
 - Change the `spacerSymbol` character
 
+---
 
 
+---
 ## Detailed instructions:
-
-
 
 > “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
 
